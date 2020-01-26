@@ -3092,7 +3092,7 @@ STATIC void
 _write_number_cell(lxw_worksheet *self, char *range,
                    int32_t style_index, lxw_cell *cell)
 {
-#ifdef USE_DOUBLE_FUNCTION
+#ifndef USE_STANDARD_DOUBLE
     char data[LXW_ATTR_32];
 
     lxw_sprintf_dbl(data, cell->u.number);
